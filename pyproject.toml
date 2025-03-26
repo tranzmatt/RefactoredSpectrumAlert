@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spectrum_utils"
+version = "0.1.0"
+description = "Common utilities for SpectrumAlert components"
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+dependencies = [
+  "numpy>=1.20.0",
+  "gpsd-py3>=0.3.0",
+  "paho-mqtt>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "black",
+  "flake8",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
