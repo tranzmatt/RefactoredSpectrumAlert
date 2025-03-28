@@ -177,7 +177,7 @@ class DataCollector:
             
             # Prepare and save data
             data = [frequency] + reduced_features.tolist()
-            print(f"Data is {data}")
+            #print(f"Data is {data}")
             self.csv_handler.write_row(data)
     
     def _extract_lite_features(self, iq_data: np.ndarray) -> List[float]:
