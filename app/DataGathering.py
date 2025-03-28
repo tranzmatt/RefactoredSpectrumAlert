@@ -10,6 +10,8 @@ from concurrent.futures import ThreadPoolExecutor
 from typing import List, Tuple, Optional, Any
 
 import numpy as np
+import SoapySDR
+
 from sklearn.decomposition import PCA
 
 # Import common utilities
@@ -360,9 +362,6 @@ class ThreadedSDRHandler(SDRHandler):
         """Override read_samples method to add thread ID to logs."""
         if not self.sdr or not self.stream:
             raise RuntimeError("SDR stream not initialized. Call setup_stream() first.")
-            
-        import SoapySDR
-        import numpy as np
             
         buff = np.zeros(sample_size, dtype=np.complex64)
         sr = self.sdr.readStream(self.stream, [buff], len(buff))
