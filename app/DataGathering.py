@@ -400,8 +400,8 @@ def parse_arguments():
         Parsed arguments object
     """
     parser = argparse.ArgumentParser(description="Multi-threaded Spectrum Data Gathering with SDR.")
-    parser.add_argument("-c", "--config", type=str, default="Refeactored/config.ini",
-                        help="Path to the configuration file (default: Refeactored/config.ini)")
+    parser.add_argument("-c", "--config", type=str, default="config.ini",
+                        help="Path to the configuration file (default: config.ini)")
     parser.add_argument("-d", "--duration", type=float, default=10,
                         help="Duration in minutes (default: 10)")
     parser.add_argument("-o", "--output", type=str, default="refactored_collected_iq_data.csv",
